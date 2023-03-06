@@ -24,7 +24,7 @@ defmodule Mago do
       "\nYou have $#{game.money}\n" |> IO.puts
     end
 
-    if game.x === 3 do
+    if game.x === 3 or (game.money === 0 and game.tyres < 4) do
       "\nYou lost\n" |> IO.puts
     end
 
